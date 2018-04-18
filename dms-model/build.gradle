@@ -1,14 +1,26 @@
 group 'com.rrkh.dms'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+}
 
-sourceCompatibility = 1.8
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+jar {
+    baseName = 'dms-model'
+    version = '0.0.1-SNAPSHOT'
+}
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8

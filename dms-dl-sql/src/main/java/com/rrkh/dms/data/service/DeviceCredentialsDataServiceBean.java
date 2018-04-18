@@ -7,6 +7,8 @@ import com.rrkh.dms.data.repository.DeviceCredentialsRepository;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class DeviceCredentialsDataServiceBean implements DeviceCredentialsDataService {
@@ -18,6 +20,7 @@ public class DeviceCredentialsDataServiceBean implements DeviceCredentialsDataSe
         this.credentialsRepository = credentialsRepository;
     }
 
+    @Transactional(propagation = Propagation.MANDATORY)
     @Override
     public DeviceCredentials getByGuid(String guid) {
         Optional<DeviceCredentialsEntity> optional = credentialsRepository.findById(guid);
@@ -28,11 +31,13 @@ public class DeviceCredentialsDataServiceBean implements DeviceCredentialsDataSe
         }
     }
 
+    @Transactional(propagation = Propagation.MANDATORY)
     @Override
     public DeviceCredentials save(DeviceCredentials deviceCredentials) {
         return credentialsRepository.save(new DeviceCredentialsEntity(deviceCredentials));
     }
 
+    @Transactional(propagation = Propagation.MANDATORY)
     @Override
     public void remove(String guid) {
         credentialsRepository.deleteById(guid);
