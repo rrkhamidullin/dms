@@ -9,4 +9,5 @@ include 'dms-model'
 include 'dms-device-api'
 include 'dms-device'
 include 'dms-runner'
+include 'dms-device-com-api'
 
