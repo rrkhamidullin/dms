@@ -19,7 +19,7 @@ public class DeviceCredentialsDataServiceBean implements DeviceCredentialsDataSe
     }
 
     @Override
-    public DeviceCredentials getByGuid(String guid) throws NotFoundException {
+    public DeviceCredentials getByGuid(String guid) {
         Optional<DeviceCredentialsEntity> optional = credentialsRepository.findById(guid);
         if (optional.isPresent()) {
             return optional.get();

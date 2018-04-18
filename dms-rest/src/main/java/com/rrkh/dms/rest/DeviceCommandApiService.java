@@ -5,6 +5,11 @@ import com.rrkh.dms.data.model.DeviceState;
 import com.rrkh.dms.service.DeviceCommandService;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -19,8 +24,10 @@ public class DeviceCommandApiService implements DeviceCommandApi {
         this.commandService = commandService;
     }
 
+    @RequestMapping(path = "/m/{guid}", method = RequestMethod.POST)
+    @ResponseBody
     @Override
-    public DeviceState runCommand(String guid, DeviceCommand command) {
+    public DeviceState runCommand(@PathVariable("guid") String guid, @RequestBody DeviceCommand command) {
         return commandService.runCommand(guid, command);
     }
 }

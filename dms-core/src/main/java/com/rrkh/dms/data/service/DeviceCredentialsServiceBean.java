@@ -1,7 +1,6 @@
 package com.rrkh.dms.data.service;
 
 
-import com.rrkh.dms.data.exception.NotFoundException;
 import com.rrkh.dms.data.model.DeviceCredentials;
 import com.rrkh.dms.data.model.DeviceCredentialsDto;
 import org.slf4j.Logger;
@@ -22,7 +21,7 @@ public class DeviceCredentialsServiceBean implements DeviceCredentialsService {
     }
 
     @Override
-    public DeviceCredentials getDeviceCredentials(String guid) throws NotFoundException {
+    public DeviceCredentials getDeviceCredentials(String guid) {
         return new DeviceCredentialsDto(credentialsDataService.getByGuid(guid));
     }
 

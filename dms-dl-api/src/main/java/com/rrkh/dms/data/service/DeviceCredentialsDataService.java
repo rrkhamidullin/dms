@@ -5,7 +5,7 @@ import com.rrkh.dms.data.model.DeviceCredentials;
 
 public interface DeviceCredentialsDataService {
 
-    DeviceCredentials getByGuid(String guid) throws NotFoundException;
+    DeviceCredentials getByGuid(String guid);
 
     DeviceCredentials save(DeviceCredentials deviceCredentials);
 

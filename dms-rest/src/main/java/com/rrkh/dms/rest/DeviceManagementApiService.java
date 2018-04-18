@@ -1,5 +1,6 @@
 package com.rrkh.dms.rest;
 
+import com.rrkh.dms.data.exception.NotFoundException;
 import com.rrkh.dms.data.model.DeviceCredentials;
 import com.rrkh.dms.data.service.DeviceCredentialsService;
 import org.slf4j.Logger;
@@ -45,7 +46,6 @@ public class DeviceManagementApiService implements DeviceManagementApi {
     }
 
     @RequestMapping(path = "/m/{guid}", method = RequestMethod.DELETE)
-    @ResponseBody
     @Override
     public void remove(@PathVariable("guid") String guid) {
         credentialsService.removeDeviceCredentials(guid);
