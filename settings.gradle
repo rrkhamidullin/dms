@@ -1,0 +1,10 @@
+rootProject.name = 'device-management-service'
+include 'dms-dl-api'
+include 'dms-dl-sql'
+include 'dms-core-api'
+include 'dms-core'
+include 'dms-rest-api'
+include 'dms-rest'
+include 'dms-model'
+include 'dms-device-api'
+
