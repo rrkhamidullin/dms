@@ -10,18 +10,21 @@ How it works now:
 TODO:
 * build configuration
     * optimize build configuration
+    * make BOM
 * transactions management
     * analyse
-* validation
-    * do it
 * exception handling/ error response
     * analyse
-* authorization
-    * do it
-* persistent DB
-    * do it 
 * dms-device
     * imagine physical device api interface
     * make physical device lazy proxy with "device IO" (protocol + client) injected
+* validation
+* authorization
+* persistent DB
 * npe hunting
-    * do it
+* caching
+* unit tests
+* end2end tests
+* javadocs
+* logging
+* publishing to local .m2
