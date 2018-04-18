@@ -11,6 +11,7 @@ TODO:
 * build configuration
     * optimize build configuration
     * make BOM
+    * publishing to local .m2
 * transactions management
     * analyse
 * exception handling/ error response
@@ -27,4 +28,3 @@ TODO:
 * end2end tests
 * javadocs
 * logging
-* publishing to local .m2
