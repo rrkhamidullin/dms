@@ -6,4 +6,6 @@ import com.rrkh.dms.data.model.DeviceState;
 public interface DeviceCommandService {
 
     DeviceState runCommand(String guid, DeviceCommand command);
+
+    DeviceState pollState(String guid);
 }

@@ -7,6 +7,8 @@ import com.rrkh.dms.data.service.DeviceCredentialsService;
 import com.rrkh.dms.device.DeviceCommandInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class DeviceCommandServiceBean implements DeviceCommandService {
@@ -20,10 +22,17 @@ public class DeviceCommandServiceBean implements DeviceCommandService {
         this.credentialsService = credentialsService;
     }
 
-
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     @Override
     public DeviceState runCommand(String guid, DeviceCommand command) {
         DeviceCredentials deviceCredentials = credentialsService.getDeviceCredentials(guid);
         return commandInterface.runCommand(deviceCredentials, command);
+    }
+
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    @Override
+    public DeviceState pollState(String guid) {
+        DeviceCredentials deviceCredentials = credentialsService.getDeviceCredentials(guid);
+        return commandInterface.pollState(deviceCredentials);
     }
 }

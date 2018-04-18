@@ -1,11 +1,20 @@
 package com.rrkh.dms.data.model;
 
-public interface DeviceState {
+public class DeviceState {
+
     public enum Status {
         NA,
         IDLE,
         BUSY
     }
 
-    Status getStatus();
+    private Status status;
+
+    public DeviceState(Status status) {
+        this.status = status;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
 }

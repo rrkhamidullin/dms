@@ -1,6 +1,6 @@
 package com.rrkh.dms.data.model;
 
-public class DeviceCredentialsDto implements DeviceCredentials {
+public class DeviceCredentialsDto implements DeviceCredentials{
 
     private String guid;
     private String uri;
@@ -10,6 +10,9 @@ public class DeviceCredentialsDto implements DeviceCredentials {
         this.guid = deviceCredentials.getGuid();
         this.uri = deviceCredentials.getUri();
         this.token = deviceCredentials.getToken();
+    }
+
+    public DeviceCredentialsDto() {
     }
 
     @Override
