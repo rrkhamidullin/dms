@@ -1,23 +1,12 @@
 package com.rrkh.dms.data.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+public class DeviceCredentialsDto implements DeviceCredentials {
 
-@Entity
-public class DeviceCredentialsEntity implements DeviceCredentials {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String guid;
     private String uri;
     private String token;
 
-    public DeviceCredentialsEntity() {
-    }
-
-    public DeviceCredentialsEntity(DeviceCredentials deviceCredentials) {
+    public DeviceCredentialsDto(DeviceCredentials deviceCredentials) {
         this.guid = deviceCredentials.getGuid();
         this.uri = deviceCredentials.getUri();
         this.token = deviceCredentials.getToken();
