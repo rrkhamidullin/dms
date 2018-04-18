@@ -8,10 +8,10 @@ public interface DeviceManagementApi {
 
     DeviceCredentials add(DeviceCredentialsDto deviceCredentials);
 
-    DeviceCredentials get(String guid);
+    DeviceCredentials get(Long guid);
 
-    DeviceCredentials update(String guid, DeviceCredentialsDto deviceCredentials);
+    DeviceCredentials update(Long guid, DeviceCredentialsDto deviceCredentials);
 
-    void remove(String guid);
+    void remove(Long guid);
 
 }

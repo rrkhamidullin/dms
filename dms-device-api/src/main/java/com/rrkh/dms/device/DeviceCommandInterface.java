@@ -6,7 +6,7 @@ import com.rrkh.dms.data.model.DeviceState;
 
 public interface DeviceCommandInterface {
 
-    DeviceState runCommand(DeviceCredentials deviceCredentials, DeviceCommand deviceCommand);
+    DeviceState sendCommand(DeviceCredentials deviceCredentials, DeviceCommand deviceCommand);
 
     DeviceState pollState(DeviceCredentials deviceCredentials);
 }

@@ -26,7 +26,7 @@ public class DeviceCommandServiceBean implements DeviceCommandService {
     @Override
     public DeviceState runCommand(String guid, DeviceCommand command) {
         DeviceCredentials deviceCredentials = credentialsService.getDeviceCredentials(guid);
-        return commandInterface.runCommand(deviceCredentials, command);
+        return commandInterface.sendCommand(deviceCredentials, command);
     }
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)

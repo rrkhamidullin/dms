@@ -6,3 +6,4 @@ TODO
 - transactions management
 - validation
 - exception handling/ error response
+- authorization

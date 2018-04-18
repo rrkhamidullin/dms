@@ -4,9 +4,9 @@ import com.rrkh.dms.data.model.DeviceCredentials;
 
 public interface DeviceCredentialsDataService {
 
-    DeviceCredentials getByGuid(String guid);
+    DeviceCredentials getByGuid(Long guid);
 
     DeviceCredentials save(DeviceCredentials deviceCredentials);
 
-    void remove(String guid);
+    void remove(Long guid);
 }

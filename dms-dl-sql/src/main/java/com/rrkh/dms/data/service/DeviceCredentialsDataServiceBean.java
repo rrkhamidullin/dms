@@ -22,7 +22,7 @@ public class DeviceCredentialsDataServiceBean implements DeviceCredentialsDataSe
 
     @Transactional(propagation = Propagation.MANDATORY)
     @Override
-    public DeviceCredentials getByGuid(String guid) {
+    public DeviceCredentials getByGuid(Long guid) {
         Optional<DeviceCredentialsEntity> optional = credentialsRepository.findById(guid);
         if (optional.isPresent()) {
             return optional.get();
@@ -39,7 +39,7 @@ public class DeviceCredentialsDataServiceBean implements DeviceCredentialsDataSe
 
     @Transactional(propagation = Propagation.MANDATORY)
     @Override
-    public void remove(String guid) {
+    public void remove(Long guid) {
         credentialsRepository.deleteById(guid);
     }
 }

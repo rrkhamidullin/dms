@@ -4,11 +4,11 @@ import com.rrkh.dms.data.model.DeviceCredentials;
 
 public interface DeviceCredentialsService {
 
-    DeviceCredentials getDeviceCredentials(String guid);
+    DeviceCredentials getDeviceCredentials(Long guid);
 
     DeviceCredentials addDeviceCredentials(DeviceCredentials deviceCredentials);
 
-    DeviceCredentials updateDeviceCredentials(String guid, DeviceCredentials deviceCredentials);
+    DeviceCredentials updateDeviceCredentials(Long guid, DeviceCredentials deviceCredentials);
 
-    void removeDeviceCredentials(String guid);
+    void removeDeviceCredentials(Long guid);
 }

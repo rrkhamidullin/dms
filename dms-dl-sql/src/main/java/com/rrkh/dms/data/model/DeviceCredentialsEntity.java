@@ -10,7 +10,7 @@ public class DeviceCredentialsEntity implements DeviceCredentials {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String guid;
+    private Long guid;
     private String uri;
     private String token;
 
@@ -24,11 +24,11 @@ public class DeviceCredentialsEntity implements DeviceCredentials {
     }
 
     @Override
-    public String getGuid() {
+    public Long getGuid() {
         return guid;
     }
 
-    public void setGuid(String guid) {
+    public void setGuid(Long guid) {
         this.guid = guid;
     }
 

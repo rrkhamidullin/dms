@@ -34,20 +34,20 @@ public class DeviceManagementApiService implements DeviceManagementApi {
     @RequestMapping(path = "/m/{guid}", method = RequestMethod.GET)
     @ResponseBody
     @Override
-    public DeviceCredentials get(@PathVariable("guid") String guid) {
+    public DeviceCredentials get(@PathVariable("guid") Long guid) {
         return credentialsService.getDeviceCredentials(guid);
     }
 
     @RequestMapping(path = "/m/{guid}", method = RequestMethod.POST)
     @ResponseBody
     @Override
-    public DeviceCredentials update(@PathVariable("guid") String guid, @RequestBody DeviceCredentialsDto deviceCredentials) {
+    public DeviceCredentials update(@PathVariable("guid") Long guid, @RequestBody DeviceCredentialsDto deviceCredentials) {
         return credentialsService.updateDeviceCredentials(guid, deviceCredentials);
     }
 
     @RequestMapping(path = "/m/{guid}", method = RequestMethod.DELETE)
     @Override
-    public void remove(@PathVariable("guid") String guid) {
+    public void remove(@PathVariable("guid") Long guid) {
         credentialsService.removeDeviceCredentials(guid);
     }
 }

@@ -2,7 +2,7 @@ package com.rrkh.dms.data.model;
 
 public class DeviceCredentialsDto implements DeviceCredentials{
 
-    private String guid;
+    private Long guid;
     private String uri;
     private String token;
 
@@ -16,11 +16,11 @@ public class DeviceCredentialsDto implements DeviceCredentials{
     }
 
     @Override
-    public String getGuid() {
+    public Long getGuid() {
         return guid;
     }
 
-    public void setGuid(String guid) {
+    public void setGuid(Long guid) {
         this.guid = guid;
     }
 

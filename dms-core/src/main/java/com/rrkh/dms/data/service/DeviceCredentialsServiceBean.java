@@ -24,7 +24,7 @@ public class DeviceCredentialsServiceBean implements DeviceCredentialsService {
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
-    public DeviceCredentials getDeviceCredentials(String guid) {
+    public DeviceCredentials getDeviceCredentials(Long guid) {
         return new DeviceCredentialsDto(credentialsDataService.getByGuid(guid));
     }
 
@@ -36,13 +36,13 @@ public class DeviceCredentialsServiceBean implements DeviceCredentialsService {
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
-    public DeviceCredentials updateDeviceCredentials(String guid, DeviceCredentials deviceCredentials) {
+    public DeviceCredentials updateDeviceCredentials(Long guid, DeviceCredentials deviceCredentials) {
         return new DeviceCredentialsDto(credentialsDataService.save(deviceCredentials));
     }
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
-    public void removeDeviceCredentials(String guid) {
+    public void removeDeviceCredentials(Long guid) {
         credentialsDataService.remove(guid);
     }
 }
