@@ -1,33 +1,10 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        mavenLocal()
-    }
-}
-
 plugins {
     id 'io.spring.dependency-management' version '1.0.5.RELEASE'
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-
-group 'com.rrkh.dms'
-version '1.0-SNAPSHOT'
-
 jar {
     baseName = 'dms-core'
-    version =  '0.1.0'
 }
-
-repositories {
-    mavenCentral()
-    mavenLocal()
-}
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 dependencies {
     compile project(':dms-core-api')

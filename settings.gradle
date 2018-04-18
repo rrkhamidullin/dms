@@ -1,4 +1,4 @@
-rootProject.name = 'device-management-service'
+rootProject.name = 'dms'
 include 'dms-dl-api'
 include 'dms-dl-sql'
 include 'dms-core-api'

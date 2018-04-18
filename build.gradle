@@ -1,0 +1,24 @@
+allprojects {
+
+    buildscript {
+        repositories {
+            mavenCentral()
+            mavenLocal()
+        }
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+
+    group 'com.rrkh.dms'
+    version '1.0-SNAPSHOT'
+}
