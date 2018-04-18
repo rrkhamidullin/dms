@@ -7,6 +7,10 @@ How it works now:
 * Runnable jar:
 `$ ./gradlew build && java -jar ./dms-runner/build/libs/dms-runner-0.1.0.jar`
 
+Use REST API:
+`$ curl -H "Content-Type: application/json" -X POST -d '{"uri":"xyz","token":"xyz"}' http://localhost:8080/m/add`
+`$ curl -H "Content-Type: application/json" -X POST -d '{}' http://localhost:8080/c/1`
+
 TODO:
 * build configuration
     * optimize build configuration
