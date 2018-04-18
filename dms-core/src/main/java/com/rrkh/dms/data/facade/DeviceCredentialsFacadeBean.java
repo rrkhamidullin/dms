@@ -9,14 +9,14 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class DeviceCredentialsServiceBean implements DeviceCredentialsService {
+public class DeviceCredentialsFacadeBean implements DeviceCredentialsFacade {
 
     private final Logger logger;
 
     private final DeviceCredentialsDataService credentialsDataService;
 
     @Autowired
-    public DeviceCredentialsServiceBean(Logger logger, DeviceCredentialsDataService credentialsDataService) {
+    public DeviceCredentialsFacadeBean(Logger logger, DeviceCredentialsDataService credentialsDataService) {
         this.logger = logger;
         this.credentialsDataService = credentialsDataService;
     }

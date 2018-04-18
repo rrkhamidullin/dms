@@ -1,6 +1,6 @@
 package com.rrkh.dms.rest.controller;
 
-import com.rrkh.dms.data.facade.DeviceCredentialsService;
+import com.rrkh.dms.data.facade.DeviceCredentialsFacade;
 import com.rrkh.dms.data.model.DeviceCredentials;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,38 +15,38 @@ import org.springframework.web.bind.annotation.RestController;
 public class DeviceManagementApiService implements DeviceManagementApi {
 
     private final Logger logger;
-    private final DeviceCredentialsService credentialsService;
+    private final DeviceCredentialsFacade credentialsFacade;
 
     @Autowired
-    public DeviceManagementApiService(Logger logger, DeviceCredentialsService credentialsService) {
+    public DeviceManagementApiService(Logger logger, DeviceCredentialsFacade credentialsFacade) {
         this.logger = logger;
-        this.credentialsService = credentialsService;
+        this.credentialsFacade = credentialsFacade;
     }
 
     @RequestMapping(path = "/m/add", method = RequestMethod.POST)
     @ResponseBody
     @Override
     public DeviceCredentials add(@RequestBody DeviceCredentials deviceCredentials) {
-        return credentialsService.addDeviceCredentials(deviceCredentials);
+        return credentialsFacade.addDeviceCredentials(deviceCredentials);
     }
 
     @RequestMapping(path = "/m/{guid}", method = RequestMethod.GET)
     @ResponseBody
     @Override
     public DeviceCredentials get(@PathVariable("guid") Long guid) {
-        return credentialsService.getDeviceCredentials(guid);
+        return credentialsFacade.getDeviceCredentials(guid);
     }
 
     @RequestMapping(path = "/m/{guid}", method = RequestMethod.POST)
     @ResponseBody
     @Override
     public DeviceCredentials update(@PathVariable("guid") Long guid, @RequestBody DeviceCredentials deviceCredentials) {
-        return credentialsService.updateDeviceCredentials(guid, deviceCredentials);
+        return credentialsFacade.updateDeviceCredentials(guid, deviceCredentials);
     }
 
     @RequestMapping(path = "/m/{guid}", method = RequestMethod.DELETE)
     @Override
     public void remove(@PathVariable("guid") Long guid) {
-        credentialsService.removeDeviceCredentials(guid);
+        credentialsFacade.removeDeviceCredentials(guid);
     }
 }

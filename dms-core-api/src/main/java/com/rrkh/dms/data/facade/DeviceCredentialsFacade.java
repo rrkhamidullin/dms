@@ -2,7 +2,7 @@ package com.rrkh.dms.data.facade;
 
 import com.rrkh.dms.data.model.DeviceCredentials;
 
-public interface DeviceCredentialsService {
+public interface DeviceCredentialsFacade {
 
     DeviceCredentials getDeviceCredentials(Long guid);
 

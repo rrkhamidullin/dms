@@ -1,6 +1,6 @@
 package com.rrkh.dms.core.service;
 
-import com.rrkh.dms.data.facade.DeviceCredentialsService;
+import com.rrkh.dms.data.facade.DeviceCredentialsFacade;
 import com.rrkh.dms.data.model.DeviceCommand;
 import com.rrkh.dms.data.model.DeviceCredentials;
 import com.rrkh.dms.data.model.DeviceState;
@@ -14,10 +14,10 @@ import org.springframework.transaction.annotation.Transactional;
 public class DeviceCommandServiceBean implements DeviceCommandService {
 
     private final DeviceCommandInterface commandInterface;
-    private final DeviceCredentialsService credentialsService;
+    private final DeviceCredentialsFacade credentialsService;
 
     @Autowired
-    public DeviceCommandServiceBean(DeviceCommandInterface commandInterface, DeviceCredentialsService credentialsService) {
+    public DeviceCommandServiceBean(DeviceCommandInterface commandInterface, DeviceCredentialsFacade credentialsService) {
         this.commandInterface = commandInterface;
         this.credentialsService = credentialsService;
     }
