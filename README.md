@@ -18,7 +18,7 @@ TODO:
     * analyse
 * dms-device
     * imagine physical device api interface
-    * make physical device lazy proxy with "device IO" (protocol + client) injected
+    * make physical device lazy proxy with abstract "device IO" (protocol + client) injected
 * validation
 * authorization
 * persistent DB
