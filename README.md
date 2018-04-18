@@ -18,10 +18,3 @@ TODO:
     * analyse
 * authorization
     * do it
-* persistent DB
-    * do it 
-* dms-device
-    * imagine physical device api interface
-    * make physical device lazy proxy with "device IO" (protocol + client) injected
-* npe hunting
-    * do it
