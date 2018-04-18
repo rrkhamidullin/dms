@@ -7,7 +7,6 @@ jar {
 }
 
 dependencies {
-    compile project(':dms-model')
     compile project(':dms-dl-api')
     compile 'org.hibernate:hibernate-core'
     compile 'org.springframework.data:spring-data-jpa'
