@@ -32,7 +32,6 @@ targetCompatibility = 1.8
 dependencies {
     compile project(':dms-model')
     compile project(':dms-dl-api')
-    compile 'org.springframework:spring-context'
     compile 'org.hibernate:hibernate-core'
     compile 'org.springframework.data:spring-data-jpa'
     compile 'org.springframework.boot:spring-boot-autoconfigure'

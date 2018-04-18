@@ -32,7 +32,6 @@ targetCompatibility = 1.8
 dependencies {
     compile project(':dms-rest-api')
     compile project(':dms-core-api')
-    compile 'org.springframework:spring-context'
     compile 'org.springframework:spring-webmvc'
     compile 'com.fasterxml.jackson.core:jackson-databind'
     compile 'org.slf4j:slf4j-api'
