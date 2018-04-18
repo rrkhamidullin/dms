@@ -32,8 +32,7 @@ targetCompatibility = 1.8
 
 dependencies {
     compile project(':dms-device-api')
-    compile 'org.springframework.boot:spring-boot-starter'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    compile 'org.springframework:spring-context'
 }
 
 dependencyManagement {

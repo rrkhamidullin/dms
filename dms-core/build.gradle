@@ -33,9 +33,9 @@ dependencies {
     compile project(':dms-core-api')
     compile project(':dms-device-api')
     compile project(':dms-dl-api')
-    compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework:spring-tx'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    compile 'org.springframework:spring-context'
+    compile 'org.slf4j:slf4j-api'
 }
 
 dependencyManagement {

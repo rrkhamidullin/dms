@@ -3,9 +3,6 @@ buildscript {
         mavenCentral()
         mavenLocal()
     }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.1.RELEASE")
-    }
 }
 
 plugins {
@@ -15,7 +12,6 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
 
 group 'com.rrkh.dms'
 version '1.0-SNAPSHOT'
@@ -36,6 +32,12 @@ targetCompatibility = 1.8
 dependencies {
     compile project(':dms-rest-api')
     compile project(':dms-core-api')
-    compile 'org.springframework.boot:spring-boot-starter-web'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    compile 'org.springframework:spring-context'
+    compile 'org.springframework:spring-webmvc'
+    compile 'com.fasterxml.jackson.core:jackson-databind'
+    compile 'org.slf4j:slf4j-api'
+}
+
+dependencyManagement {
+    imports { mavenBom("org.springframework.boot:spring-boot-dependencies:2.0.1.RELEASE") }
 }
