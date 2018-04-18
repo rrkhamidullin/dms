@@ -30,8 +30,7 @@ public class RestConfiguration {
                 JsonNode tree = codec.readTree(parser);
                 return codec.treeToValue(tree, DeviceCredentialsDto.class);
             }
-        });
-        module.addDeserializer(DeviceCommand.class, new JsonDeserializer<DeviceCommand>() {
+        }).addDeserializer(DeviceCommand.class, new JsonDeserializer<DeviceCommand>() {
             @Override
             public DeviceCommand deserialize(JsonParser parser, DeserializationContext context) throws IOException, JsonProcessingException {
                 ObjectCodec codec = parser.getCodec();
