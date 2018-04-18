@@ -6,7 +6,9 @@ public interface DeviceCredentialsDataService {
 
     DeviceCredentials getByGuid(Long guid);
 
-    DeviceCredentials save(DeviceCredentials deviceCredentials);
+    DeviceCredentials create(DeviceCredentials deviceCredentials);
+
+    DeviceCredentials update(Long guid, DeviceCredentials deviceCredentials);
 
     void remove(Long guid);
 }

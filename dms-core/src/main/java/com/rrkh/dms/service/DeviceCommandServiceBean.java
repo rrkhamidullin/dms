@@ -24,14 +24,14 @@ public class DeviceCommandServiceBean implements DeviceCommandService {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     @Override
-    public DeviceState runCommand(String guid, DeviceCommand command) {
+    public DeviceState runCommand(Long guid, DeviceCommand command) {
         DeviceCredentials deviceCredentials = credentialsService.getDeviceCredentials(guid);
         return commandInterface.sendCommand(deviceCredentials, command);
     }
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     @Override
-    public DeviceState pollState(String guid) {
+    public DeviceState pollState(Long guid) {
         DeviceCredentials deviceCredentials = credentialsService.getDeviceCredentials(guid);
         return commandInterface.pollState(deviceCredentials);
     }

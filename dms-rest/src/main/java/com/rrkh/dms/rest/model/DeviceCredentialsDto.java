@@ -1,6 +1,8 @@
-package com.rrkh.dms.data.model;
+package com.rrkh.dms.rest.model;
 
-public class DeviceCredentialsDto implements DeviceCredentials{
+import com.rrkh.dms.data.model.DeviceCredentials;
+
+public class DeviceCredentialsDto implements DeviceCredentials {
 
     private Long guid;
     private String uri;

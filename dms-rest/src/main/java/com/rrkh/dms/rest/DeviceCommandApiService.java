@@ -27,7 +27,14 @@ public class DeviceCommandApiService implements DeviceCommandApi {
     @RequestMapping(path = "/c/{guid}", method = RequestMethod.POST)
     @ResponseBody
     @Override
-    public DeviceState runCommand(@PathVariable("guid") String guid, @RequestBody DeviceCommand command) {
+    public DeviceState runCommand(@PathVariable("guid") Long guid, @RequestBody DeviceCommand command) {
         return commandService.runCommand(guid, command);
+    }
+
+    @RequestMapping(path = "/c/{guid}", method = RequestMethod.GET)
+    @ResponseBody
+    @Override
+    public DeviceState pollState(@PathVariable("guid") Long guid) {
+        return commandService.pollState(guid);
     }
 }

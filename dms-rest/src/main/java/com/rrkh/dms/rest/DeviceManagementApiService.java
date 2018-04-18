@@ -1,7 +1,6 @@
 package com.rrkh.dms.rest;
 
 import com.rrkh.dms.data.model.DeviceCredentials;
-import com.rrkh.dms.data.model.DeviceCredentialsDto;
 import com.rrkh.dms.data.service.DeviceCredentialsService;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +26,7 @@ public class DeviceManagementApiService implements DeviceManagementApi {
     @RequestMapping(path = "/m/add", method = RequestMethod.POST)
     @ResponseBody
     @Override
-    public DeviceCredentials add(@RequestBody DeviceCredentialsDto deviceCredentials) {
+    public DeviceCredentials add(@RequestBody DeviceCredentials deviceCredentials) {
         return credentialsService.addDeviceCredentials(deviceCredentials);
     }
 
@@ -41,7 +40,7 @@ public class DeviceManagementApiService implements DeviceManagementApi {
     @RequestMapping(path = "/m/{guid}", method = RequestMethod.POST)
     @ResponseBody
     @Override
-    public DeviceCredentials update(@PathVariable("guid") Long guid, @RequestBody DeviceCredentialsDto deviceCredentials) {
+    public DeviceCredentials update(@PathVariable("guid") Long guid, @RequestBody DeviceCredentials deviceCredentials) {
         return credentialsService.updateDeviceCredentials(guid, deviceCredentials);
     }
 

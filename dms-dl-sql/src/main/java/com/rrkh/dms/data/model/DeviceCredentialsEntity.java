@@ -18,7 +18,6 @@ public class DeviceCredentialsEntity implements DeviceCredentials {
     }
 
     public DeviceCredentialsEntity(DeviceCredentials deviceCredentials) {
-        this.guid = deviceCredentials.getGuid();
         this.uri = deviceCredentials.getUri();
         this.token = deviceCredentials.getToken();
     }
