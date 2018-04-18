@@ -1,4 +1,4 @@
-package com.rrkh.dms.configuration;
+package com.rrkh.dms.rest.configuration;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -25,17 +25,17 @@ public class RestConfiguration {
         SimpleModule module = new SimpleModule();
         module.addDeserializer(DeviceCredentials.class, new JsonDeserializer<DeviceCredentials>() {
             @Override
-            public DeviceCredentials deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JsonProcessingException {
-                ObjectCodec codec = p.getCodec();
-                JsonNode tree = codec.readTree(p);
+            public DeviceCredentials deserialize(JsonParser parser, DeserializationContext context) throws IOException, JsonProcessingException {
+                ObjectCodec codec = parser.getCodec();
+                JsonNode tree = codec.readTree(parser);
                 return codec.treeToValue(tree, DeviceCredentialsDto.class);
             }
         });
         module.addDeserializer(DeviceCommand.class, new JsonDeserializer<DeviceCommand>() {
             @Override
-            public DeviceCommand deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JsonProcessingException {
-                ObjectCodec codec = p.getCodec();
-                JsonNode tree = codec.readTree(p);
+            public DeviceCommand deserialize(JsonParser parser, DeserializationContext context) throws IOException, JsonProcessingException {
+                ObjectCodec codec = parser.getCodec();
+                JsonNode tree = codec.readTree(parser);
                 return codec.treeToValue(tree, DeviceCommandDto.class);
             }
         });

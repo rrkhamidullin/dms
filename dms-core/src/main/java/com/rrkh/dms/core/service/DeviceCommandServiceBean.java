@@ -1,10 +1,10 @@
-package com.rrkh.dms.service;
+package com.rrkh.dms.core.service;
 
+import com.rrkh.dms.data.facade.DeviceCredentialsService;
 import com.rrkh.dms.data.model.DeviceCommand;
 import com.rrkh.dms.data.model.DeviceCredentials;
 import com.rrkh.dms.data.model.DeviceState;
-import com.rrkh.dms.data.service.DeviceCredentialsService;
-import com.rrkh.dms.device.DeviceCommandInterface;
+import com.rrkh.dms.device.service.DeviceCommandInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

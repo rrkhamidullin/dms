@@ -1,4 +1,4 @@
-package com.rrkh.dms.data.service;
+package com.rrkh.dms.data.facade;
 
 import com.rrkh.dms.data.model.DeviceCredentials;
 

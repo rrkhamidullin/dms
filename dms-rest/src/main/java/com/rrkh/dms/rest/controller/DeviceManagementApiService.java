@@ -1,7 +1,7 @@
-package com.rrkh.dms.rest;
+package com.rrkh.dms.rest.controller;
 
+import com.rrkh.dms.data.facade.DeviceCredentialsService;
 import com.rrkh.dms.data.model.DeviceCredentials;
-import com.rrkh.dms.data.service.DeviceCredentialsService;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

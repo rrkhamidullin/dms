@@ -1,7 +1,7 @@
-package com.rrkh.dms.data.service;
-
+package com.rrkh.dms.data.facade;
 
 import com.rrkh.dms.data.model.DeviceCredentials;
+import com.rrkh.dms.data.service.DeviceCredentialsDataService;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

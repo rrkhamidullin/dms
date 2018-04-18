@@ -1,4 +1,4 @@
-package com.rrkh.dms;
+package com.rrkh.dms.app;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +15,6 @@ public class Application {
     Logger logger(InjectionPoint injectionPoint) {
         return LoggerFactory.getLogger(injectionPoint.getMethodParameter().getContainingClass());
     }
-
-
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

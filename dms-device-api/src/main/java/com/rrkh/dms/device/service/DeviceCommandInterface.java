@@ -1,4 +1,4 @@
-package com.rrkh.dms.device;
+package com.rrkh.dms.device.service;
 
 import com.rrkh.dms.data.model.DeviceCommand;
 import com.rrkh.dms.data.model.DeviceCredentials;

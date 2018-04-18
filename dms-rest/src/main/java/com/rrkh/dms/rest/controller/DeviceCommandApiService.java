@@ -1,8 +1,8 @@
-package com.rrkh.dms.rest;
+package com.rrkh.dms.rest.controller;
 
+import com.rrkh.dms.core.service.DeviceCommandService;
 import com.rrkh.dms.data.model.DeviceCommand;
 import com.rrkh.dms.data.model.DeviceState;
-import com.rrkh.dms.service.DeviceCommandService;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

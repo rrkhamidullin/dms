@@ -1,4 +1,4 @@
-package com.rrkh.dms.rest;
+package com.rrkh.dms.rest.controller;
 
 import com.rrkh.dms.data.model.DeviceCommand;
 import com.rrkh.dms.data.model.DeviceState;

@@ -1,4 +1,4 @@
-package com.rrkh.dms.service;
+package com.rrkh.dms.core.service;
 
 import com.rrkh.dms.data.model.DeviceCommand;
 import com.rrkh.dms.data.model.DeviceState;
