@@ -8,6 +8,7 @@ jar {
 
 dependencies {
     compile project(':dms-device-api')
+    compile project(':dms-device-com-api')
     compile 'org.springframework:spring-context'
 }
 
