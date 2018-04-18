@@ -24,7 +24,7 @@ public class DeviceCommandApiService implements DeviceCommandApi {
         this.commandService = commandService;
     }
 
-    @RequestMapping(path = "/m/{guid}", method = RequestMethod.POST)
+    @RequestMapping(path = "/c/{guid}", method = RequestMethod.POST)
     @ResponseBody
     @Override
     public DeviceState runCommand(@PathVariable("guid") String guid, @RequestBody DeviceCommand command) {

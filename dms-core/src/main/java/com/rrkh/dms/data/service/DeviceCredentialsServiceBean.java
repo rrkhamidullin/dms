@@ -5,11 +5,9 @@ import com.rrkh.dms.data.model.DeviceCredentials;
 import com.rrkh.dms.data.model.DeviceCredentialsDto;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class DeviceCredentialsServiceBean implements DeviceCredentialsService {
 
     private final Logger logger;
@@ -22,25 +20,21 @@ public class DeviceCredentialsServiceBean implements DeviceCredentialsService {
         this.credentialsDataService = credentialsDataService;
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public DeviceCredentials getDeviceCredentials(String guid) {
         return new DeviceCredentialsDto(credentialsDataService.getByGuid(guid));
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public DeviceCredentials addDeviceCredentials(DeviceCredentials deviceCredentials) {
         return new DeviceCredentialsDto(credentialsDataService.save(deviceCredentials));
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public DeviceCredentials updateDeviceCredentials(String guid, DeviceCredentials deviceCredentials) {
         return new DeviceCredentialsDto(credentialsDataService.save(deviceCredentials));
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void removeDeviceCredentials(String guid) {
         credentialsDataService.remove(guid);

@@ -1,9 +1,11 @@
 package com.rrkh.dms.data.model;
 
 public interface DeviceState {
-    public enum Status{
+    public enum Status {
         NA,
         IDLE,
         BUSY
     }
+
+    Status getStatus();
 }

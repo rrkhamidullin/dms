@@ -1,25 +1,25 @@
-group 'com.rrkh.dms'
-version '1.0-SNAPSHOT'
-
 buildscript {
     repositories {
         mavenCentral()
         mavenLocal()
     }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.1.RELEASE")
-    }
+}
+
+plugins {
+    id "io.spring.dependency-management" version "1.0.5.RELEASE"
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
+
+
+group 'com.rrkh.dms'
+version '1.0-SNAPSHOT'
 
 jar {
     baseName = 'dms-device'
-    version =  '0.1.0'
+    version = '0.1.0'
 }
 
 repositories {
@@ -32,4 +32,10 @@ targetCompatibility = 1.8
 
 dependencies {
     compile project(':dms-device-api')
+    compile 'org.springframework.boot:spring-boot-starter'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
+
+dependencyManagement {
+    imports { mavenBom("org.springframework.boot:spring-boot-dependencies:2.0.1.RELEASE") }
 }

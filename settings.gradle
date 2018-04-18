@@ -8,4 +8,5 @@ include 'dms-rest'
 include 'dms-model'
 include 'dms-device-api'
 include 'dms-device'
+include 'dms-runner'
 

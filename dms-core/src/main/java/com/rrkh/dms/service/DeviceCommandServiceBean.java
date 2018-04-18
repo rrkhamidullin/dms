@@ -7,8 +7,6 @@ import com.rrkh.dms.data.service.DeviceCredentialsService;
 import com.rrkh.dms.device.DeviceCommandInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class DeviceCommandServiceBean implements DeviceCommandService {
