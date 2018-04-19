@@ -9,7 +9,6 @@ apply plugin: 'io.spring.dependency-management'
 
 bootJar {
     baseName = 'dms-runner'
-    version =  '0.1.0'
 }
 
 dependencies {
