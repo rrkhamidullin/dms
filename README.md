@@ -5,7 +5,7 @@ How it works now:
 * Gradle task:
     * `$ ./gradlew build && ./gradlew :dms-runner:bootRun`
 * Runnable jar:
-    * `$ ./gradlew build && java -jar ./dms-runner/build/libs/dms-runner-0.1.0.jar`
+    * `$ ./gradlew build && java -jar ./dms-runner/build/libs/dms-runner-1.0-SNAPSHOT.jar`
 
 * Use REST API:
     * Add device:
