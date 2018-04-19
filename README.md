@@ -36,9 +36,10 @@ TODO:
 * validation
 * authorization
 * persistent DB
-* npe hunting
-* caching
+* noSql DB
+* cache
 * unit tests
 * end2end tests
 * javadocs
 * logging
+* ...
