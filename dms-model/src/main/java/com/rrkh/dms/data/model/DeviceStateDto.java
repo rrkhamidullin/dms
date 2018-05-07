@@ -15,6 +15,7 @@ public class DeviceStateDto implements DeviceState {
         this.status = status;
     }
 
+    @Override
     public DeviceState.Status getStatus() {
         return status;
     }
